@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PeriodikLab — Belajar Sistem Periodik Unsur</title>
+<meta name="description" content="Website pembelajaran interaktif Sistem Periodik Unsur: pendahuluan, materi, project based learning, 15 soal latihan, dan kesimpulan.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="bgCanvas" aria-hidden="true"></canvas>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ============ NAVBAR ============ -->
+<header class="nav" id="nav">
+  <a class="brand" href="#home" aria-label="Beranda">
+    <span class="brand-atom" aria-hidden="true"></span>Periodik<b>Lab</b>
+  </a>
+  <nav id="menu" aria-label="Navigasi bab">
+    <a href="#bab1" data-sec="bab1"><span>Bab 1</span><small>Pendahuluan</small></a>
+    <a href="#bab2" data-sec="bab2"><span>Bab 2</span><small>Materi</small></a>
+    <a href="#bab3" data-sec="bab3"><span>Bab 3</span><small>Proyek PjBL</small></a>
+    <a href="#bab4" data-sec="bab4"><span>Bab 4</span><small>Latihan Soal</small></a>
+    <a href="#bab5" data-sec="bab5"><span>Bab 5</span><small>Kesimpulan</small></a>
+  </nav>
+  <button id="themeBtn" class="icon-btn" aria-label="Ganti tema terang/gelap">🌙</button>
+  <button id="burger" class="icon-btn burger" aria-label="Buka menu">☰</button>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-text">
+    <p class="eyebrow reveal">Kimia • Kelas X • Materi Interaktif</p>
+    <h1 class="reveal">Sistem <span class="grad">Periodik</span> Unsur</h1>
+    <p class="lead reveal">Jelajahi 118 unsur, temukan pola tersembunyi di balik tabel periodik, kerjakan proyek kreatif, lalu uji pemahamanmu dengan 15 soal.</p>
+    <div class="hero-actions reveal">
+      <a href="#bab1" class="btn primary">Mulai Belajar ➜</a>
+      <a href="#bab2" class="btn ghost">Langsung ke Tabel</a>
+    </div>
+    <ul class="chapter-chips reveal">
+      <li><a href="#bab1">1 · Pendahuluan</a></li>
+      <li><a href="#bab2">2 · Materi</a></li>
+      <li><a href="#bab3">3 · Proyek</a></li>
+      <li><a href="#bab4">4 · Soal</a></li>
+      <li><a href="#bab5">5 · Kesimpulan</a></li>
+    </ul>
+  </div>
+
+  <div class="hero-visual reveal" aria-hidden="true">
+    <svg viewBox="0 0 300 300" class="hero-atom">
+      <defs>
+        <radialGradient id="nuc" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#fff" />
+          <stop offset="40%" stop-color="#5eead4" />
+          <stop offset="100%" stop-color="#8b5cf6" />
+        </radialGradient>
+        <path id="o1" d="M30,150 a120,45 0 1,0 240,0 a120,45 0 1,0 -240,0" />
+      </defs>
+      <g class="orbits">
+        <use href="#o1" class="orbit-line" />
+        <use href="#o1" class="orbit-line" transform="rotate(60 150 150)" />
+        <use href="#o1" class="orbit-line" transform="rotate(120 150 150)" />
+      </g>
+      <g>
+        <circle r="7" fill="#5eead4"><animateMotion dur="4s" repeatCount="indefinite"><mpath href="#o1"/></animateMotion></circle>
+      </g>
+      <g transform="rotate(60 150 150)">
+        <circle r="7" fill="#f472b6"><animateMotion dur="5s" repeatCount="indefinite"><mpath href="#o1"/></animateMotion></circle>
+      </g>
+      <g transform="rotate(120 150 150)">
+        <circle r="7" fill="#fbbf24"><animateMotion dur="6s" repeatCount="indefinite"><mpath href="#o1"/></animateMotion></circle>
+      </g>
+      <circle class="nucleus" cx="150" cy="150" r="22" fill="url(#nuc)" />
+    </svg>
+    <div class="float-tag t1">H</div>
+    <div class="float-tag t2">Fe</div>
+    <div class="float-tag t3">Au</div>
+    <div class="float-tag t4">O</div>
+  </div>
+  <a href="#bab1" class="scroll-hint" aria-label="Gulir ke bawah"><span></span></a>
+</section>
+
+<!-- ============ BAB 1 ============ -->
+<section class="chapter" id="bab1">
+  <header class="chapter-head reveal">
+    <span class="chapter-num">01</span>
+    <div>
+      <p class="eyebrow">Bab 1</p>
+      <h2>Pendahuluan</h2>
+    </div>
+  </header>
+
+  <div class="grid-3">
+    <article class="card glass reveal">
+      <div class="card-icon">🧪</div>
+      <h3>Apa itu Sistem Periodik?</h3>
+      <p>Sistem periodik unsur adalah tabel yang mengelompokkan unsur-unsur kimia berdasarkan <b>nomor atom</b>, <b>konfigurasi elektron</b>, dan <b>sifat kimia yang berulang secara periodik</b>. Baris disebut <i>periode</i> dan kolom disebut <i>golongan</i>.</p>
+    </article>
+    <article class="card glass reveal">
+      <div class="card-icon">🔭</div>
+      <h3>Mengapa Penting?</h3>
+      <p>Dengan tabel periodik kita dapat <b>memprediksi sifat</b> suatu unsur hanya dari letaknya, memahami bagaimana unsur membentuk ikatan, dan mempelajari ratusan unsur secara teratur, bukan dihafal satu per satu.</p>
+    </article>
+    <article class="card glass reveal">
+      <div class="card-icon">🎯</div>
+      <h3>Tujuan Pembelajaran</h3>
+      <ul class="check-list">
+        <li>Menjelaskan perkembangan sistem periodik</li>
+        <li>Menentukan golongan &amp; periode dari konfigurasi elektron</li>
+        <li>Menganalisis tren sifat periodik unsur</li>
+        <li>Merancang proyek kreatif tentang tabel periodik</li>
+      </ul>
+    </article>
+  </div>
+
+  <div class="stats reveal">
+    <div class="stat"><b class="count" data-count="118">0</b><span>Unsur dikenal</span></div>
+    <div class="stat"><b class="count" data-count="18">0</b><span>Golongan</span></div>
+    <div class="stat"><b class="count" data-count="7">0</b><span>Periode</span></div>
+    <div class="stat"><b class="count" data-count="4">0</b><span>Blok (s, p, d, f)</span></div>
+  </div>
+
+  <div class="subhead reveal">
+    <h3>Perjalanan Sejarah Tabel Periodik</h3>
+    <p class="muted">Klik titik waktu untuk melihat ceritanya.</p>
+  </div>
+  <div class="timeline reveal">
+    <div class="tl-track" id="tlTrack" role="tablist" aria-label="Linimasa sejarah"></div>
+    <div class="tl-detail glass" id="tlDetail" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- ============ BAB 2 ============ -->
+<section class="chapter" id="bab2">
+  <header class="chapter-head reveal">
+    <span class="chapter-num">02</span>
+    <div>
+      <p class="eyebrow">Bab 2</p>
+      <h2>Materi: Sistem Periodik Unsur</h2>
+    </div>
+  </header>
+
+  <div class="tabs reveal" role="tablist">
+    <button class="tab active" data-tab="table" role="tab">🧩 Tabel Interaktif</button>
+    <button class="tab" data-tab="group" role="tab">📚 Golongan &amp; Periode</button>
+    <button class="tab" data-tab="trend" role="tab">📈 Sifat Periodik</button>
+    <button class="tab" data-tab="sim" role="tab">⚛️ Simulator Konfigurasi</button>
+  </div>
+
+  <!-- TAB 1 -->
+  <div class="tabpanel active" id="tab-table">
+    <div class="toolbar glass">
+      <div class="seg" id="modeBtns" role="group" aria-label="Mode warna">
+        <button class="active" data-mode="cat">Kategori</button>
+        <button data-mode="mass">Massa atom</button>
+        <button data-mode="en">Keelektronegatifan</button>
+      </div>
+      <input type="search" id="search" placeholder="Cari unsur (nama, simbol, nomor)…" aria-label="Cari unsur">
+      <button class="btn small ghost" id="clearHl" hidden>✕ Hapus sorotan</button>
+    </div>
+    <div class="legend" id="legend"></div>
+
+    <div class="table-layout">
+      <div class="ptable-wrap">
+        <div class="ptable" id="ptable"></div>
+        <p class="muted small">💡 Geser ke samping pada layar kecil. Klik unsur mana pun untuk detailnya.</p>
+      </div>
+
+      <aside class="detail glass" id="detail">
+        <div class="detail-top">
+          <div class="big-sym" id="dBig">
+            <span class="dz" id="dZ">6</span>
+            <span class="ds" id="dSym">C</span>
+            <span class="dm" id="dMass">12.011</span>
+          </div>
+          <div>
+            <h3 id="dName">Karbon</h3>
+            <span class="badge" id="dCat">Nonlogam</span>
+          </div>
+        </div>
+        <canvas id="bohrCanvas" width="360" height="360" aria-label="Model atom Bohr"></canvas>
+        <dl class="facts">
+          <div><dt>Golongan</dt><dd id="dGroup">-</dd></div>
+          <div><dt>Periode</dt><dd id="dPeriod">-</dd></div>
+          <div><dt>Blok</dt><dd id="dBlock">-</dd></div>
+          <div><dt>Elektronegativitas</dt><dd id="dEN">-</dd></div>
+          <div class="wide"><dt>Kulit elektron</dt><dd id="dShell">-</dd></div>
+          <div class="wide"><dt>Konfigurasi elektron</dt><dd id="dConf">-</dd></div>
+        </dl>
+        <p class="fun" id="dFact"></p>
+        <div class="detail-nav">
+          <button class="btn small ghost" id="prevEl">◀ Sebelumnya</button>
+          <button class="btn small ghost" id="nextEl">Berikutnya ▶</button>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- TAB 2 -->
+  <div class="tabpanel" id="tab-group">
+    <div class="rule-box glass">
+      <div><b>Periode</b> (baris) = jumlah <b>kulit</b> yang terisi elektron.</div>
+      <div><b>Golongan A</b> = jumlah <b>elektron valensi</b> pada kulit terluar.</div>
+      <div><b>Golongan B</b> = unsur transisi (golongan 3–12), mengisi subkulit d.</div>
+    </div>
+
+    <h3 class="subhead-sm">Golongan</h3>
+    <div class="group-grid" id="groupGrid"></div>
+
+    <h3 class="subhead-sm">Periode</h3>
+    <p class="muted">Jumlah unsur tiap periode. Klik batang untuk menyorotnya di tabel.</p>
+    <div class="period-bars" id="periodBars"></div>
+  </div>
+
+  <!-- TAB 3 -->
+  <div class="tabpanel" id="tab-trend">
+    <p class="muted">Pilih sifat periodik, lalu amati arah perubahan nilainya dalam satu periode (→) dan satu golongan (↓). Warna terang = nilai besar.</p>
+    <div class="seg wrap" id="trendBtns" role="group">
+      <button class="active" data-p="radius">Jari-jari atom</button>
+      <button data-p="ion">Energi ionisasi</button>
+      <button data-p="en">Keelektronegatifan</button>
+      <button data-p="ea">Afinitas elektron</button>
+      <button data-p="metal">Sifat logam</button>
+    </div>
+    <div class="trend-layout">
+      <div class="trend-board glass">
+        <div class="axis-x"><span>Golongan  ➜</span><b id="trendArrowX"></b></div>
+        <div class="trend-inner">
+          <div class="axis-y"><span>Periode  ➜</span><b id="trendArrowY"></b></div>
+          <div class="trend-grid" id="trendGrid"></div>
+        </div>
+      </div>
+      <div class="trend-text glass" id="trendText"></div>
+    </div>
+  </div>
+
+  <!-- TAB 4 -->
+  <div class="tabpanel" id="tab-sim">
+    <p class="muted">Geser penggeser nomor atom (atau tekan ▶) untuk melihat elektron mengisi kulit dan subkulit satu per satu.</p>
+    <div class="sim-layout">
+      <div class="sim-left glass">
+        <canvas id="simCanvas" width="360" height="360" aria-label="Simulasi konfigurasi elektron"></canvas>
+        <div class="sim-controls">
+          <button class="btn small primary" id="playSim">▶ Putar</button>
+          <input type="range" id="zRange" min="1" max="118" value="11" aria-label="Nomor atom">
+          <output id="zNum">11</output>
+        </div>
+      </div>
+      <div class="sim-right glass">
+        <div class="sim-head">
+          <div class="big-sym" id="simBig"><span class="dz" id="simZ">11</span><span class="ds" id="simSym">Na</span></div>
+          <div><h3 id="simName">Natrium</h3><span class="badge" id="simCat">Logam Alkali</span></div>
+        </div>
+        <dl class="facts">
+          <div class="wide"><dt>Konfigurasi elektron</dt><dd id="simConf"></dd></div>
+          <div class="wide"><dt>Persebaran kulit (K, L, M, …)</dt><dd id="simShell"></dd></div>
+          <div><dt>Periode</dt><dd id="simPeriod"></dd></div>
+          <div><dt>Golongan</dt><dd id="simGroup"></dd></div>
+          <div><dt>Elektron valensi</dt><dd id="simVal"></dd></div>
+          <div><dt>Blok</dt><dd id="simBlock"></dd></div>
+        </dl>
+        <h4>Pengisian subkulit</h4>
+        <div class="dots" id="simDots"></div>
+        <p class="muted small">Urutan pengisian (aturan Aufbau): 1s 2s 2p 3s 3p 4s 3d 4p 5s 4d 5p 6s 4f 5d 6p 7s 5f 6d 7p.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BAB 3 ============ -->
+<section class="chapter" id="bab3">
+  <header class="chapter-head reveal">
+    <span class="chapter-num">03</span>
+    <div>
+      <p class="eyebrow">Bab 3</p>
+      <h2>Aktivitas Project Based Learning</h2>
+    </div>
+  </header>
+
+  <div class="card glass reveal driving">
+    <div class="card-icon">❓</div>
+    <div>
+      <h3>Pertanyaan Pemandu</h3>
+      <p>“Bagaimana kita menyusun dan menyajikan 118 unsur agar pola sifatnya mudah dilihat, dipahami, dan diingat oleh orang lain?”</p>
+    </div>
+  </div>
+
+  <div class="subhead reveal"><h3>Langkah Proyek (6 Sintaks PjBL)</h3><p class="muted">Klik tiap langkah untuk melihat kegiatannya.</p></div>
+  <div class="steps reveal">
+    <div class="step-track" id="pjSteps"></div>
+    <div class="step-bar"><i id="stepFill"></i></div>
+    <div class="step-detail glass" id="pjDetail" aria-live="polite"></div>
+  </div>
+
+  <div class="subhead reveal"><h3>Pilih Produk Proyek Kelompokmu</h3></div>
+  <div class="grid-3 reveal" id="pjOptions"></div>
+
+  <div class="two-col">
+    <div class="card glass reveal">
+      <h3>✅ Daftar Pantau Proyek</h3>
+      <p class="muted small">Centang tahap yang sudah selesai (tersimpan otomatis di browser).</p>
+      <div class="check-wrap">
+        <ul class="checklist" id="pjCheck"></ul>
+        <div class="ring-box">
+          <svg viewBox="0 0 120 120" class="ring">
+            <circle cx="60" cy="60" r="50" class="ring-bg"></circle>
+            <circle cx="60" cy="60" r="50" class="ring-fg" id="pjRing"></circle>
+          </svg>
+          <b id="pjPct">0%</b>
+        </div>
+      </div>
+    </div>
+
+    <div class="card glass reveal">
+      <h3>🎰 Undi Unsur Kelompok</h3>
+      <p class="muted small">Setiap kelompok meneliti satu unsur “andalan”. Tekan tombol untuk mengundi!</p>
+      <div class="slot" id="spinSlot" aria-live="polite">
+        <span class="slot-z">?</span><span class="slot-s">?</span><span class="slot-n">Siapa yang terpilih?</span>
+      </div>
+      <button class="btn primary" id="spinBtn">Undi Unsur 🎲</button>
+      <p class="spin-info" id="spinInfo"></p>
+    </div>
+  </div>
+
+  <div class="subhead reveal"><h3>Rencana Waktu (4 Pekan)</h3></div>
+  <div class="week-grid reveal">
+    <div class="week glass"><b>Pekan 1</b><span>Riset data unsur &amp; pembagian peran</span></div>
+    <div class="week glass"><b>Pekan 2</b><span>Desain sketsa &amp; persiapan bahan</span></div>
+    <div class="week glass"><b>Pekan 3</b><span>Produksi &amp; monitoring guru</span></div>
+    <div class="week glass"><b>Pekan 4</b><span>Presentasi, galeri jalan &amp; refleksi</span></div>
+  </div>
+
+  <div class="subhead reveal"><h3>Rubrik Penilaian</h3></div>
+  <div class="table-scroll reveal">
+    <table class="rubric">
+      <thead><tr><th>Aspek</th><th>Sangat Baik (4)</th><th>Baik (3)</th><th>Cukup (2)</th><th>Perlu Bimbingan (1)</th></tr></thead>
+      <tbody>
+        <tr><th>Ketepatan Konsep</th><td>Semua data unsur benar &amp; lengkap</td><td>Sebagian kecil data keliru</td><td>Banyak data kurang tepat</td><td>Data sebagian besar keliru</td></tr>
+        <tr><th>Kreativitas Produk</th><td>Orisinal, rapi, informatif</td><td>Menarik &amp; cukup rapi</td><td>Sederhana</td><td>Kurang tertata</td></tr>
+        <tr><th>Kerja Sama</th><td>Semua anggota berperan aktif</td><td>Sebagian besar aktif</td><td>Hanya beberapa aktif</td><td>Dikerjakan satu orang</td></tr>
+        <tr><th>Presentasi</th><td>Jelas, percaya diri, menjawab pertanyaan</td><td>Jelas, kadang ragu</td><td>Kurang runtut</td><td>Tidak mampu menjelaskan</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ BAB 4 ============ -->
+<section class="chapter" id="bab4">
+  <header class="chapter-head reveal">
+    <span class="chapter-num">04</span>
+    <div>
+      <p class="eyebrow">Bab 4</p>
+      <h2>Latihan 15 Soal</h2>
+    </div>
+  </header>
+  <div class="quiz glass reveal" id="quizBox"></div>
+</section>
+
+<!-- ============ BAB 5 ============ -->
+<section class="chapter" id="bab5">
+  <header class="chapter-head reveal">
+    <span class="chapter-num">05</span>
+    <div>
+      <p class="eyebrow">Bab 5</p>
+      <h2>Kesimpulan</h2>
+    </div>
+  </header>
+
+  <div class="summary-grid">
+    <article class="sum-card glass reveal"><span>1</span><p>Tabel periodik berkembang dari <b>triade Dobereiner</b>, <b>oktaf Newlands</b>, <b>Mendeleev</b> (massa atom), hingga <b>Moseley</b> (nomor atom) sebagai dasar sistem modern.</p></article>
+    <article class="sum-card glass reveal"><span>2</span><p>Tabel periodik modern memiliki <b>18 golongan</b> dan <b>7 periode</b>, serta dibagi menjadi blok <b>s, p, d, dan f</b>.</p></article>
+    <article class="sum-card glass reveal"><span>3</span><p><b>Periode</b> sama dengan jumlah kulit, sedangkan <b>golongan A</b> sama dengan jumlah elektron valensi.</p></article>
+    <article class="sum-card glass reveal"><span>4</span><p>Dalam satu periode (kiri→kanan) jari-jari atom <b>mengecil</b>, energi ionisasi &amp; keelektronegatifan <b>meningkat</b>.</p></article>
+    <article class="sum-card glass reveal"><span>5</span><p>Dalam satu golongan (atas→bawah) jari-jari atom <b>membesar</b>, energi ionisasi &amp; keelektronegatifan <b>menurun</b>, sifat logam <b>bertambah</b>.</p></article>
+    <article class="sum-card glass reveal"><span>6</span><p>Melalui <b>proyek</b>, pemahaman konsep menjadi bermakna karena kamu merancang, membuat, dan mempresentasikan hasilnya.</p></article>
+  </div>
+
+  <div class="final glass reveal">
+    <div>
+      <h3>🏆 Capaianmu</h3>
+      <p class="muted">Skor kuis terbaik yang tersimpan di browser ini.</p>
+    </div>
+    <div class="final-score"><b id="bestScore">–</b><span>/ 15</span></div>
+    <a href="#bab4" class="btn primary">Coba Kuis Lagi</a>
+  </div>
+
+  <blockquote class="quote reveal">“Keteraturan dalam tabel periodik adalah bukti bahwa alam semesta tersusun dengan pola yang indah.”</blockquote>
+</section>
+
+</main>
+
+<footer class="footer">
+  <p>© 2026 PeriodikLab • Dibuat dengan HTML, CSS &amp; JavaScript</p>
+  <a href="#home">↑ Kembali ke atas</a>
+</footer>
+
+<canvas id="confetti" aria-hidden="true"></canvas>
+<script src="script.js"></script>
+</body>
+</html>
